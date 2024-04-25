@@ -1,0 +1,32 @@
+.heading-icon , .video-icons , .call-to-action-area{
+    background-color: #5f99be;
+}
+
+.themeix-purchase-btn-3 :hover {
+    color: beige;
+}
+
+.bg-blue{
+    background-color: #5f99be;
+}
+
+.cl-blue{
+    color: #5f99be;
+}
+
+.see-all-link {
+    color: #51ade6;
+}
+
+dl {
+    color: black;
+}
+
+dt {
+    color: black;
+}
+
+p {
+    color: black;
+}
+

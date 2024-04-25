@@ -1,6 +1,5 @@
 <?php
-include('scripts/get_recents_vdeo.php');
-include('scripts/get_mores_vdeo.php');
+include('scripts/get_filmEducatif.php');
 include('functions/function_list.php');
 include('layouts/head.php');
 ?>
@@ -22,10 +21,10 @@ include('layouts/header.php');
             <div class="col-md-12">
                 <div class="page-banner">
                     <div class="page-title">
-                        <h2>Nos Videos</h2>
+                        <h2>Vos Emissions</h2>
                     </div>
                     <div class="page-breadcrumb">
-                        <p><a href='index-2.html'>Accueil </a> / Nos Videos</p>
+                        <p><a href='index-2.html'>Vos Emissions </a> / Film Educatif </p>
                     </div>
                 </div>
             </div>
@@ -45,27 +44,29 @@ include('layouts/header.php');
                 <div class="video-carousel owl-carousel">
 
                     <?php
-                    for ($i = 0; $i < count($videos_recents) && $i < 4; $i++) {
+                    for ($i = 0; $i < count($data_filmEducatif['items']) && $i < 4; $i++) {
+
+                        $item = $data_filmEducatif['items'][$i];
                     ?>
 
                         <div class="single-video">
                             <div class="video-img">
-                                <a href='index.php?id=<?= $videos_recents[$i]["id"]['videoId'] ?>'>
-                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents[$i]["id"]['videoId'] ?>/default.jpg" alt="Video" />
+                                <a href='directs.php?id=<?= $item['snippet']['resourceId']['videoId'] ?>'>
+                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $item['snippet']['resourceId']['videoId'] ?>/default.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">3.11</span>
                             </div>
                             <div class="video-content">
-                                <h4><a class='video-title' href='single-video.html'><?= $videos_recents[$i]['snippet']['title'] ?></a></h4>
+                                <h4><a class='video-title' href='single-video.html'><?= $item['snippet']['title'] ?></a></h4>
                                 <div class="video-counter">
                                     <div class="video-viewers">
                                         <span class="fa fa-eye view-icon"></span>
-                                        <span><?= get_nbr_view($videos_recents[$i]['id']['videoId']) ?></span>
+                                        <span><?= get_nbr_view($item['snippet']['resourceId']['videoId']) ?></span>
                                     </div>
                                     <div class="video-feedback">
                                         <div class="video-like-counter">
                                             <span class="far fa-thumbs-up like-icon"></span>
-                                            <span><?= get_nbr_likes($videos_recents[$i]['id']['videoId']) ?></span>
+                                            <span><?= get_nbr_likes($item['snippet']['resourceId']['videoId']) ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -90,32 +91,34 @@ include('layouts/header.php');
 
             <div class="themeix-section-h">
                 <span class="heading-icon"><i class="fa fa-bolt"></i></span>
-                <h3>Plus recentes</h3>
+                <h3>Plus vidéos</h3>
             </div>
             <?php
 
-            for ($i = 14; $i < count($videos_mores) && $i < 30; $i++) {
+            for ($i = 0; $i < count($data_filmEducatif['items']) && $i < 30; $i++) {
+
+                $item = $data_filmEducatif['items'][$i];
             ?>
 
                 <div class="col-md-6 col-lg-3 themeix-half">
                     <div class="single-video">
                         <div class="video-img">
-                            <a href='index.php?id=<?= $videos_mores[$i]["id"]['videoId'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_mores[$i]["id"]['videoId'] ?>/default.jpg" alt="Video" />
+                            <a href='directs.php?id=<?= $item['snippet']['resourceId']['videoId'] ?>'>
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $item['snippet']['resourceId']['videoId'] ?>/default.jpg" alt="Video" />
                             </a>
-                            <span class="video-duration"><?= get_duration($videos_mores[$i]['id']['videoId']) ?></span>
+                            <span class="video-duration"><?= get_duration($item['snippet']['resourceId']['videoId']) ?></span>
                         </div>
                         <div class="video-content">
-                            <h4><a class='video-title' href='single-video.html'> <?= $videos_mores[$i]['snippet']['title'] ?> </a></h4>
+                            <h4><a class='video-title' href='single-video.html'> <?= $item['snippet']['title'] ?> </a></h4>
                             <div class="video-counter">
                                 <div class="video-viewers">
                                     <span class="fa fa-eye view-icon"></span>
-                                    <span><?= get_nbr_view($videos_mores[$i]['id']['videoId']) ?></span>
+                                    <span><?= get_nbr_view($item['snippet']['resourceId']['videoId']) ?></span>
                                 </div>
                                 <div class="video-feedback">
                                     <div class="video-like-counter">
                                         <span class="far fa-thumbs-up like-icon"></span>
-                                        <span><?= get_nbr_likes($videos_mores[$i]['id']['videoId']) ?></span>
+                                        <span><?= get_nbr_likes($item['snippet']['resourceId']['videoId']) ?></span>
                                     </div>
                                 </div>
                             </div>

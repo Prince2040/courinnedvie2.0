@@ -1,8 +1,6 @@
 <?php
 include('functions/function_list.php');
-include('scripts/get_latest_vdeo.php');
 include('scripts/get_recents_vdeo.php');
-include('scripts/get_mores_vdeo.php');
 include('layouts/head.php');
 
 if (isset($_GET['id'])) {
@@ -17,7 +15,6 @@ if (isset($_GET['id'])) {
 
     // Convertir la réponse JSON en tableau associatif
     $datavdeo = json_decode($responsevdeodata, true);
-
 }
 
 ?>
@@ -44,7 +41,7 @@ include('layouts/header.php');
                     <div class="video-posts-video">
 
                         <div class="embed-responsive embed-responsive-16by9 ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/<?= isset($videos_view_id) ? $videos_view_id : $data['items'][0]['id']['videoId'] ?>" class="embed-responsive-item"></iframe>
+                            <iframe src="https://www.youtube.com/embed/<?= isset($videos_view_id) ? $videos_view_id : $videos_recents[0]['id']['videoId'] ?>" class="embed-responsive-item"></iframe>
                         </div>
                     </div>
                     <div class="video-posts-data">
@@ -52,10 +49,10 @@ include('layouts/header.php');
                             <span class="video-icons"><i class="fa fa-info-circle"></i></span>
 
                             <div class="video-post-info">
-                                <h4><a href="#"><?= isset($datavdeo) ? $datavdeo['items'][0]['snippet']['title'] : $data['items'][0]['snippet']['title'] ?></a></h4>
+                                <h4><a href="#"><?= isset($datavdeo) ? $datavdeo['items'][0]['snippet']['title'] : $videos_recents[0]['snippet']['title'] ?></a></h4>
                                 <div class="video-post-date">
                                     <span><i class="fa fa-calendar"></i></span>
-                                    <p><?= isset($datavdeo) ? publishedAt($datavdeo['items'][0]['snippet']['publishedAt']) : publishedAt($data['items'][0]['snippet']['publishedAt']) ?></p>
+                                    <p><?= isset($datavdeo) ? publishedAt($datavdeo['items'][0]['snippet']['publishedAt']) : publishedAt($videos_recents[0]['snippet']['publishedAt']) ?></p>
                                     <span class="video-posts-author">
                                         <i class="fa fa-folder-o"></i>
                                         <!--<a href="#">Animals Videos</a>-->
@@ -65,16 +62,16 @@ include('layouts/header.php');
                         </div>
                         <div class="video-post-counter">
                             <div class="video-post-viewers">
-                                <h3><?= isset($videos_view_id) ? get_nbr_view($videos_view_id) : get_nbr_view($data['items'][0]['id']['videoId']) ?> views</h3>
+                                <h3><?= isset($videos_view_id) ? get_nbr_view($videos_view_id) : get_nbr_view($videos_recents[0]['id']['videoId']) ?> views</h3>
                             </div>
                             <div class="video-like">
                                 <span><i class="far fa-thumbs-up"></i></span>
-                                <p><?= isset($videos_view_id) ? get_nbr_likes($videos_view_id)  : get_nbr_likes($data['items'][0]['id']['videoId']) ?></p>
+                                <p><?= isset($videos_view_id) ? get_nbr_likes($videos_view_id)  : get_nbr_likes($videos_recents[0]['id']['videoId']) ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="video-post-text">
-                        <p><?= $data['items'][0]['snippet']['description'] ?></p>
+                        <p><?= $videos_recents[0]['snippet']['description'] ?></p>
                     </div>
                     <!-- Start Tags And Share Options -->
                     <div class="tags-and-share">
@@ -110,11 +107,11 @@ include('layouts/header.php');
                     </div>
 
                     <?php
-                    for ($i = 1; $i < count($videos_recents) && $i < 11; $i++) {
+                    for ($i = 1; $i < count($videos_recents) && $i < 5; $i++) {
                     ?>
                         <div class="single-video">
                             <div class="video-img">
-                                <a href='index.php?id=<?= $videos_recents[$i]["id"]['videoId'] ?>' >
+                                <a href='index.php?id=<?= $videos_recents[$i]["id"]['videoId'] ?>'>
                                     <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents[$i]["id"]['videoId'] ?>/default.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">5.28</span>
@@ -159,28 +156,28 @@ include('layouts/header.php');
         <div class="row">
 
             <?php
-            for ($i = 4; $i < count($videos_mores) && $i < 13; $i++) {
+                for ($i = 4; $i < count($videos_recents) && $i < 12; $i++) {
             ?>
 
-                <div class="col-md-6 col-lg-4 themeix-half">
+                <div class="col-md-6 col-lg-3 themeix-half">
                     <div class="single-video">
                         <div class="video-img">
-                            <a href='index.php?id=<?= $videos_mores[$i]["id"]['videoId'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_mores[$i]["id"]['videoId'] ?>/default.jpg" alt="Video" />
+                            <a href='index.php?id=<?= $videos_recents[$i]["id"]['videoId'] ?>'>
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents[$i]["id"]['videoId'] ?>/default.jpg" alt="Video" />
                             </a>
-                            <span class="video-duration"><?= get_duration($videos_mores[$i]['id']['videoId']) ?></span>
+                            <span class="video-duration"><?= get_duration($videos_recents[$i]['id']['videoId']) ?></span>
                         </div>
                         <div class="video-content">
-                            <h4><a class='video-title' href='single-video.html'><?= $videos_mores[$i]['snippet']['title'] ?></a></h4>
+                            <h4><a class='video-title' href='single-video.html'><?= $videos_recents[$i]['snippet']['title'] ?></a></h4>
                             <div class="video-counter">
                                 <div class="video-viewers">
                                     <span class="fa fa-eye view-icon"></span>
-                                    <span><?= get_nbr_view($videos_mores[$i]['id']['videoId']) ?></span>
+                                    <span><?= get_nbr_view($videos_recents[$i]['id']['videoId']) ?></span>
                                 </div>
                                 <div class="video-feedback">
                                     <div class="video-like-counter">
                                         <span class="far fa-thumbs-up like-icon"></span>
-                                        <span><?= get_nbr_likes($videos_mores[$i]['id']['videoId']) ?></span>
+                                        <span><?= get_nbr_likes($videos_recents[$i]['id']['videoId']) ?></span>
                                     </div>
                                 </div>
                             </div>
@@ -199,15 +196,10 @@ include('layouts/header.php');
 <!-- Plus de video -->
 
 
-
-
-
 <!-- Start Call To Action Area -->
 <?php
 include('layouts/call_to_action.php');
 ?>
-
-
 
 <!-- End Call To Action Area -->
 <!-- Start Footer Area -->
