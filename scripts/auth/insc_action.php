@@ -72,11 +72,11 @@ if (isset($_POST['Inscription'])) {
 
                 //on le redire vers la page d'acceuil
 
-                $sucess_msg = ' vous etes connecté ... ';
+                $sucess_msg = 'vous etes connecté ... ';
 
                 $sucess_msgEncoded = base64_encode($sucess_msg);
 
-                $url = "../directs.php?sucess_msg=" . urlencode($sucess_msgEncoded);
+                $url = "../../directs.php?sucess_msg=" . urlencode($sucess_msgEncoded);
 
                 header("location: " . $url);
 
@@ -88,7 +88,7 @@ if (isset($_POST['Inscription'])) {
                 // Chiffrer le message
                 $error_msgEncoded = base64_encode($error_msg);
 
-                $url = "../index.php?error_msg=" . urlencode($error_msgEncoded);
+                $url = "../../index.php?error_msg=" . urlencode($error_msgEncoded);
 
                 header("location: " . $url);
             }
@@ -99,7 +99,7 @@ if (isset($_POST['Inscription'])) {
             // Chiffrer le message
             $error_msgEncoded = base64_encode($error_msg);
 
-            $url = "../index.php?error_msg=" . urlencode($error_msgEncoded);
+            $url = "../../index.php?error_msg=" . urlencode($error_msgEncoded);
 
             header("location: " . $url);
         }
@@ -109,7 +109,7 @@ if (isset($_POST['Inscription'])) {
         // Chiffrer le message
         $error_msgEncoded = base64_encode($error_msg);
 
-        $url = "../index.php?error_msg=" . urlencode($error_msgEncoded);
+        $url = "../../index.php?error_msg=" . urlencode($error_msgEncoded);
 
         header("location: " . $url);
     }

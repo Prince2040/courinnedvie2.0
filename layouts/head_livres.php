@@ -1,8 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>eTube - HTML5 Video Blog Site Template</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <title>Couronne de vie TV</title>
+    <link rel="icon" type="image/png" href="assets/images/favico.png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
     <!-- LOAD CSS -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -23,6 +23,17 @@
     <!-- Theme CSS -->
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css+/styl.css" rel="stylesheet">
+
+    <style>
+    .see-all-link {
+        color: #51ade6;
+    }
+
+    .video-title {
+        font-weight: inherit;
+    }
+
+</style>
 
 
 </head>

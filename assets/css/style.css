@@ -1894,6 +1894,6 @@ button.jscolor {
     background-position: 50% 50%;
   }*/
             
- img.lazy {
-    background: transparent url(../images/ring.gif) no-repeat 50% 50%;
-}
+ /*img.lazy {
+    background: transparent url(../images/ring.gif) no-repeat ; /*50% 50%
+}*/

@@ -65,7 +65,7 @@ if (isset($_POST['connexion'])) {
 
             $sucess_msgEncoded = base64_encode($sucess_msg);
 
-            $url = "../directs.php?sucess_msg=" . urlencode($sucess_msgEncoded);
+            $url = "../../directs.php?sucess_msg=" . urlencode($sucess_msgEncoded);
 
             header("location: " . $url); 
 
@@ -77,7 +77,7 @@ if (isset($_POST['connexion'])) {
             // Chiffrer le message
             $error_msgEncoded = base64_encode($error_msg);
 
-            $url = "../index.php?error_msg=" . urlencode($error_msgEncoded);
+            $url = "../../index.php?error_msg=" . urlencode($error_msgEncoded);
 
             header("location: " . $url);
         }
@@ -88,14 +88,14 @@ if (isset($_POST['connexion'])) {
         // Chiffrer le message
         $error_msgEncoded = base64_encode($error_msg);
 
-        $url = "../index.php?error_msg=" . urlencode($error_msgEncoded);
+        $url = "../../index.php?error_msg=" . urlencode($error_msgEncoded);
 
         header("location: " . $url);
 
     }
 } else {
     
-    header('location : ../index.php');
+    header('location : ../../index.php');
 }
 
 ?>

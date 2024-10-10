@@ -1,4 +1,13 @@
+    <!-- MDB 
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />  -->
+
 <?php
+
+include('scripts/script_de_suivi.php');
+
 include('scripts/get_playlists/get_evangelistEnMission.php');
 include('scripts/get_playlists/get_allonsAlautreBord.php');
 include('scripts/get_playlists/get_ainsiParleEternel.php');
@@ -75,92 +84,60 @@ if (isset($sucess_msgDecoded)) {
 
 <!-- fin recuperation des message d'erreur et de success  -->
 
-
 <!-- Start Slider Area -->
-<div class="slider-area pt-40">
+<div class="slider-area ptb-40">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="slider-wrapper feature-carousel owl-carousel">
-                    <div class="single-feature row">
-                        <div class="slider-part-one col-md-6 pr-0">
-                            <div class="single-video">
-                                <div class="video-img feature-post-img">
-                                    <a href='single-video.html'>
-                                        <img class="lazy" alt="Video" src="assets/images/slider/a.jpg">
-                                    </a>
-                                    <span class="video-duration">8.12</span>
+                <div class="slider-wrapper">
+
+                    <!-- Carousel wrapper -->
+                    <div id="carouselVideoExample" data-mdb-carousel-init class="carousel slide carousel-fade" data-mdb-ride="carousel">
+
+                        <!-- Inner -->
+                        <div class="carousel-inner">
+                            <!-- Single item -->
+                            <div class="carousel-item active">
+                                <video class="img-fluid" autoplay loop muted>
+                                    <source src="vdeo1.mp4" type="video/mp4" />
+                                </video>
+                                <div class="carousel-caption d-none d-md-block">
                                 </div>
-                                <div class="video-content">
-                                    <h4><a class='video-title' href='single-video.html'>Allons à l’autre Bord</a></h4>
+                            </div>
+
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                                <video class="img-fluid" autoplay loop muted>
+                                    <source src="vdeo2.mp4" type="video/mp4" />
+                                </video>
+                                <div class="carousel-caption d-none d-md-block">
+
+                                </div>
+                            </div>
+                            <!-- Single item -->
+                            <div class="carousel-item">
+                                <video class="img-fluid" autoplay loop muted>
+                                    <source src="vdeo3.mp4" type="video/mp4" />
+                                </video>
+                                <div class="carousel-caption d-none d-md-block">
+                                    
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-part-two col-md-6">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="single-video">
-                                        <div class="video-img feature-post-img">
-                                            <a href='single-video.html'>
-                                                <img class="lazy" alt="Video" src="assets/images/slider/b.jpg">
-                                            </a>
-                                            <span class="video-duration">10.52</span>
-                                        </div>
-                                        <div class="video-content">
-                                            <h4><a class='video-title' href='single-video.html'>Ainsi parle l’éternel</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="single-video">
-                                        <div class="video-img feature-post-img">
-                                            <a href='single-video.html'>
-                                                <img class="lazy" alt="Video" src="assets/images/slider/c.jpg">
-                                            </a>
-                                            <span class="video-duration">5.28</span>
-                                        </div>
-                                        <div class="video-content">
-                                            <h4><a class='video-title' href='single-video.html'>Femmes vous avez la parole</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="single-video">
-                                        <div class="video-img feature-post-img">
-                                            <a href='single-video.html'>
-                                                <img class="lazy" alt="Video" src="assets/images/slider/d.jpg">
-                                            </a>
-                                            <span class="video-duration">5.28</span>
-                                        </div>
-                                        <div class="video-content">
-                                            <h4><a class='video-title' href='single-video.html'>Evangéliste en mission</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="single-video">
-                                        <div class="video-img feature-post-img">
-                                            <a href='single-video.html'>
-                                                <img class="lazy" alt="Video" src="assets/images/slider/g.jpg">
-                                            </a>
-                                            <span class="video-duration">5.28</span>
-                                        </div>
-                                        <div class="video-content">
-                                            <h4><a class='video-title' href='single-video.html'>Entreprendre en Christ</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Inner -->
                     </div>
+                    <!-- Carousel wrapper -->
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- End Slider Area -->
+
+
+
+
+
 
 <!-- Start Video Carousel -->
 <div class="video-carousel-area themeix-ptb">
@@ -179,13 +156,14 @@ if (isset($sucess_msgDecoded)) {
                     ?>
                         <div class="single-video">
                             <div class="video-img">
-                                <a href='index.php?id=<?= $videos_recents_data[$i]["id"] ?>'>
+                        
+                            <a href='directs.php?id=<?= $videos_recents_data[$i]["id"] ?>'>
                                     <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]["id"] ?>/default.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">5.28</span>
                             </div>
                             <div class="video-content">
-                                <h4><a class='video-title' href='single-video.html'><?= $videos_recents_data[$i]['title'] ?></a></h4>
+                                <h4><a class='video-title' href='directs.php?id=<?= $videos_recents_data[$i]["id"] ?>'><?= $videos_recents_data[$i]['title'] ?></a></h4>
                                 <div class="video-counter">
                                     <div class="video-viewers">
                                         <span class="fa fa-eye view-icon"></span>
@@ -204,33 +182,6 @@ if (isset($sucess_msgDecoded)) {
                     <?php
                     }
                     ?>
-                    <!--<div class="single-video">
-                            <div class="video-img">
-                                <a href='single-video.html'>
-                                <img class="lazy" data-src="assets/images/thumbnails/5.jpg" alt="Video" />
-                                </a>
-                                <span class="video-duration">5.28</span>
-                            </div>
-                            <div class="video-content">
-                                <h4><a class='video-title' href='single-video.html'>Buffalo Chicken Potato Skins  (Gougeres English Video)</a></h4>
-                                <div class="video-counter">
-                                    <div class="video-viewers">
-                                        <span class="fa fa-eye view-icon"></span>
-                                        <span>241,021</span>
-                                    </div>
-                                    <div class="video-feedback">
-                                        <div class="video-like-counter">
-                                            <span class="far fa-thumbs-up like-icon"></span>
-                                            <span>2140</span>
-                                        </div>
-                                        <div class="video-like-counter">
-                                           <span class="far fa-thumbs-down dislike-icon"></span>
-                                            <span>2140</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
                 </div>
             </div>
         </div>
@@ -247,25 +198,25 @@ if (isset($sucess_msgDecoded)) {
                 <div class="themeix-section-h">
                     <span class="heading-icon"><i class="fa fa-book"></i></span>
                     <h3>Vos Emissions / Allons a l'autre bord </h3>
-                    <a href="#" class="see-all-link">voir plus de videos</a>
+                    <a href="playlists/allonsAlautreBord.php" class="see-all-link">voir plus de videos</a>
                 </div>
             </div>
         </div>
         <div class="row">
 
             <?php
-            for ($i = 1;  $i < 9; $i++) {
+            for ($i = 1; $i < 9; $i++) {
             ?>
                 <div class="col-md-6 col-lg-3 themeix-half">
                     <div class="single-video">
                         <div class="video-img">
-                            <a href='directs.php?id=<?= $videos_allonsAlautreBord_data[$i]['id'] ?> '>
+                            <a href='directs.php?id=<?= $videos_allonsAlautreBord_data[$i]['id'] ?>'>
                                 <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_allonsAlautreBord_data[$i]['id'] ?>/default.jpg" alt="Video" />
                             </a>
                             <span class="video-duration">5.28</span>
                         </div>
                         <div class="video-content">
-                            <h4><a class='video-title' href='single-video.html'> <?= $videos_allonsAlautreBord_data[$i]['title'] ?> </a></h4>
+                            <h4><a class='video-title' href='directs.php?id=<?= $videos_allonsAlautreBord_data[$i]['id'] ?>'> <?= $videos_allonsAlautreBord_data[$i]['title'] ?> </a></h4>
                             <div class="video-counter">
                                 <div class="video-viewers">
                                     <span class="fa fa-eye view-icon"></span>
@@ -306,24 +257,24 @@ if (isset($sucess_msgDecoded)) {
                     <?php
                     for ($i = 0; $i < count($videos_evangelistEnMission_data) && $i < 4; $i++) {
                     ?>
-                        <div class="single-review" style="display: flex; justify-content: space-between; " >
+                        <div class="single-review" style="display: flex; justify-content: space-between; ">
                             <div class="review-img" style="width: 300px;">
-                            <a href='directs.php?id=<?= $videos_evangelistEnMission_data[$i]['id'] ?> '>
-                                <img class="lazy" style="width: 100%;" data-src="https://img.youtube.com/vi/<?= $videos_evangelistEnMission_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <a href='directs.php?id=<?= $videos_evangelistEnMission_data[$i]['id'] ?> '>
+                                    <img class="lazy" style="width: 100%;" data-src="https://img.youtube.com/vi/<?= $videos_evangelistEnMission_data[$i]['id'] ?>/default.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">5.28</span>
                             </div>
                             <div class="review-content">
-                            <h4><a class='video-title' href='single-video.html'> <?= $videos_evangelistEnMission_data[$i]['title'] ?> </a></h4>
+                                <h4><a class='video-title' href='directs.php?id=<?= $videos_evangelistEnMission_data[$i]['id'] ?> '> <?= $videos_evangelistEnMission_data[$i]['title'] ?> </a></h4>
                                 <div class="video-counter-plan">
                                     <div class="video-viewers">
                                         <span class="fa fa-eye view-icon"></span>
-                                    <span><?= $videos_evangelistEnMission_data[$i]['viewCount'] ?></span>
+                                        <span><?= $videos_evangelistEnMission_data[$i]['viewCount'] ?></span>
                                     </div>
                                     <div class="video-feedback">
                                         <div class="video-like-counter">
                                             <span class="far fa-thumbs-up like-icon"></span>
-                                        <span><?= $videos_evangelistEnMission_data[$i]['likeCount'] ?></span>
+                                            <span><?= $videos_evangelistEnMission_data[$i]['likeCount'] ?></span>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +282,7 @@ if (isset($sucess_msgDecoded)) {
                                     <p><?= $videos_evangelistEnMission_data[$i]['description'] ?></p>
                                 </div>
                                 <div class="review-btn">
-                                    <a href="#" class="view-btn">View Details</a>
+                                    <a href="directs.php?id=<?= $videos_evangelistEnMission_data[$i]['id'] ?> " class="view-btn">Voir</a>
                                 </div>
                             </div>
                         </div>
@@ -396,7 +347,7 @@ if (isset($sucess_msgDecoded)) {
                     <div class="subscribe-box">
                         <div class="themeix-section-h">
                             <span class="heading-icon"><i class="fab fa-html5" aria-hidden="true"></i></span>
-                            <h3>Subscribe now</h3>
+                            <h3>Souscrire maintenant</h3>
                         </div>
                         <form action="#" class="subscribe-form">
                             <div class="form-group">
@@ -423,7 +374,7 @@ if (isset($sucess_msgDecoded)) {
                 <div class="themeix-section-h">
                     <span class="heading-icon"><i class="fas fa-futbol" aria-hidden="true"></i></span>
                     <h3>Vos Emissions / Enseignements </h3>
-                    <a href="#" class="see-all-link">Plus de videos </a>
+                    <a href="playlists/enseignements.php" class="see-all-link">Plus de videos </a>
                 </div>
             </div>
         </div>
@@ -441,7 +392,7 @@ if (isset($sucess_msgDecoded)) {
                             <span class="video-duration">5.28</span>
                         </div>
                         <div class="video-content">
-                            <h4><a class='video-title' href='single-video.html'> <?= $videos_enseignement_data[$i]['title'] ?> </a></h4>
+                            <h4><a class='video-title' href='directs.php?id=<?= $videos_enseignement_data[$i]['id'] ?>'> <?= $videos_enseignement_data[$i]['title'] ?> </a></h4>
                             <div class="video-counter">
                                 <div class="video-viewers">
                                     <span class="fa fa-eye view-icon"></span>
@@ -486,17 +437,6 @@ include('layouts/footer.php');
 
 <!-- style supllementaire --->
 
-<style>
-    .see-all-link {
-        color: #51ade6;
-    }
-
-    .video-title {
-        font-weight: inherit;
-    }
-
-</style>
-
 
 <!-- Load JS -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
@@ -513,6 +453,8 @@ include('layouts/footer.php');
 
 </body>
 
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.umd.min.js"></script>
 
 <!-- Mirrored from etube-html.netlify.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Feb 2024 14:23:52 GMT -->
 

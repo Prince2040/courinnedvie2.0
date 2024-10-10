@@ -8,17 +8,6 @@ include('../scripts/auth/insc_action.php');
             <div class="row">
                 <div class="col-md-12">
                     <div class="header-top-area">
-                        <div class="site-info left">
-                            <div class="mail-address">
-                                <i class="fa fa-envelope-o"></i>
-                                <a href="mailto:couronnedevie@gmail.com">couronnedevie@gmail.com</a>
-                                <span class="sepator">|</span>
-                            </div>
-                            <div class="server-time">
-                                <i class="fa fa-clock-o"></i>
-                                <span> 5 Rue Caplat 75018 Paris</span>
-                            </div>
-                        </div>
                         <div class="user-info right">
 
                             <?php
@@ -35,8 +24,8 @@ include('../scripts/auth/insc_action.php');
                             } else {
                             ?>
                                 <div class="upload-opt">
-                                    <i class="fa fa-envelope"></i>
-                                    <a href="#upload-options" data-bs-toggle="modal">Se connecter</a>
+                                    <i class="fa fa-sign-in-alt"></i>
+                                    <a href="#upload-options" data-bs-toggle="modal">Se Connecter</a>
                                     <span class="sepator">|</span>
                                 </div>
                             <?php
@@ -50,16 +39,16 @@ include('../scripts/auth/insc_action.php');
                             ?>
 
                                 <div class="login-info">
-                                    <i class="fa fa-sign-out"></i>
-                                    <a href="scripts/deconex_action.php">Se deconnecter</a>
+                                    <i class="fa fa-sign-out-alt"></i>
+                                    <a href="../scripts/auth/deconex_action.php">Se deconnecter</a>
                                 </div>
 
                             <?php
                             } else {
                             ?>
                                 <div class="login-info">
-                                    <i class="fa fa-heart"></i>
-                                    <a href="#login-info" data-bs-toggle="modal">S'abonner</a>
+                                    <i class="fa fa-user-plus"></i>
+                                    <a href="#login-info" data-bs-toggle="modal">Creer un compte</a>
                                 </div>
 
                             <?php
@@ -78,7 +67,7 @@ include('../scripts/auth/insc_action.php');
                                         <button class="btn btn-sm btn-default close-btn" data-bs-dismiss="modal">&times;</button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="scripts/conex_action.php" method="post" class="upload-form" enctype="multipart/form-data">
+                                        <form action="../scripts/auth/conex_action.php" method="post" class="upload-form" enctype="multipart/form-data">
 
                                             <div class="form-group mb-3">
                                                 <label for="user_password">Email :</label>
@@ -120,7 +109,7 @@ include('../scripts/auth/insc_action.php');
                                         <button data-bs-dismiss="modal" class="btn btn-sm btn-default close-btn">&times;</button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="scripts/insc_action.php" method="post" class="login-form">
+                                        <form action="../scripts/auth/insc_action.php" method="post" class="login-form">
                                             <div class="form-group">
                                                 <label for="user_name">Nom :</label>
                                                 <input type="text" name="user_name" class="form-control" id="user_name">
@@ -163,7 +152,7 @@ include('../scripts/auth/insc_action.php');
                        <div class="mod-menu">
                         <div class="row">
                             <div class="col-3">
-                                <a href="index.html" title="logo" class="logo"><img src="../assets/images/monlogo.png" alt="logo"></a>
+                                <a href="../index.php" title="logo" class="logo"><img src="../assets/images/monlogo.png" alt="logo"></a>
                             </div>
                             <div class="col-9 nopadding">
                                 <div class="main-nav rightnav">
@@ -176,42 +165,42 @@ include('../scripts/auth/insc_action.php');
                                         <ul class="nav themeix-nav">
                                             <li><a href='../index.php' title='acceuil'>Acceuil</a></li>
                                             <li><a href='../directs.php' title='directs'>Directs</a></li>
-                                            <li><a href='../bible/genese.php' title='contact'>Bible</a></li>                                                                        
-                                            <li><a href='../blog.html'>Actualités</a> </li>
+                                            <li><a href='../bible/genese.php' title='Bible'>Bible</a></li>                                                                        
+                                            <li><a href='../blog.php'>Actualités</a> </li>
                                             <li class="mega-menu remove-border active"><a href="#">Vos Emisions</a><span class="arrow"></span>
                                                 <ul>
                                                     <li><span class="subtitle">Parole vivante</span> <span class="arrow"></span>
                                                         <ul class="mega-list">
-                                                            <li><a href='../allonsAlautreBord.php'><i class="fa fa-angle-right"></i>Allons à l’autre Bord</a></li>
-                                                            <li><a href='../ainsiParleEternel.php'><i class="fa fa-angle-right"></i>Ainsi parle l’éternel</a></li>
-                                                            <li><a href='../femmeVousAvezParole.php'><i class="fa fa-angle-right"></i>Femmes vous avez la parole</a></li>
+                                                            <li><a href='../playlists/allonsAlautreBord.php'><i class="fa fa-angle-right"></i>Allons à l’autre Bord</a></li>
+                                                            <li><a href='../playlists/ainsiParleEternel.php'><i class="fa fa-angle-right"></i>Ainsi parle l’éternel</a></li>
+                                                            <li><a href='../playlists/femmeVousAvezParole.php'><i class="fa fa-angle-right"></i>Femmes vous avez la parole</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><span class="subtitle">Evangelisation</span> <span class="arrow"></span>
                                                         <ul class="mega-list">
-                                                            <li><a href='../egliseAlaUne.php'><i class="fa fa-angle-right"></i>Eglise à la Une</a></li>
-                                                            <li><a href='../evangelisteEnMission.php'><i class="fa fa-angle-right"></i>Evangéliste en mission</a></li>
-                                                            <li><a href='../lumiereSurActu.php'><i class="fa fa-angle-right"></i>Lumière sur l’actu</a></li>
+                                                            <li><a href='../playlists/egliseAlaUne.php'><i class="fa fa-angle-right"></i>Eglise à la Une</a></li>
+                                                            <li><a href='../playlists/evangelisteEnMission.php'><i class="fa fa-angle-right"></i>Evangéliste en mission</a></li>
+                                                            <li><a href='../playlists/lumiereSurActu.php'><i class="fa fa-angle-right"></i>Lumière sur l’actu</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><span class="subtitle">Film / Dessin animés</span><span class="arrow"></span>
                                                         <ul class="mega-list">
-                                                            <li><a href='../filmEducatif.php'><i class="fa fa-angle-right"></i>Film éducatif</a></li>
-                                                            <li><a href='../dessinAnimes.php'><i class="fa fa-angle-right"></i>Dessins animés</a></li>
-                                                            <li><a href='../filmEnPrime.php'><i class="fa fa-angle-right"></i>Film en Prime</a></li>
+                                                            <li><a href='../playlists/filmEducatif.php'><i class="fa fa-angle-right"></i>Film éducatif</a></li>
+                                                            <li><a href='../playlists/dessinAnimes.php'><i class="fa fa-angle-right"></i>Dessins animés</a></li>
+                                                            <li><a href='../playlists/filmEnPrime.php'><i class="fa fa-angle-right"></i>Film en Prime</a></li>
                                                         </ul>
                                                     </li>
                                                     <li><span class="subtitle">Marche avec Christ</span> <span class="arrow"></span>
                                                         <ul class="mega-list">
-                                                            <li><a href='../entreprendreEnChrist.php'><i class="fa fa-angle-right"></i>Entreprendre en Christ</a></li>
-                                                            <li><a href='../contact.php'><i class="fa fa-angle-right"></i>Contact</a></li>
-                                                            <li><a href='../single-video.html'><i class="fa fa-angle-right"></i>Single Video</a></li>
+                                                            <li><a href='../playlists/entreprendreEnChrist.php'><i class="fa fa-angle-right"></i>Entreprendre en Christ</a></li>
+                                                            <li><a href='../playlists/contact.php'><i class="fa fa-angle-right"></i>Contact</a></li>
+                                                            <li><a href='../playlists/single-video.html'><i class="fa fa-angle-right"></i>Single Video</a></li>
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li><a href='../gallery.php' title='contact'>Nos vidéos</a></li>
-                                            <li><a href='../contact.php' title='contact'>Nous Contacter</a></li>
+                                            <li><a href='../gallery.php' title='nos_videos'>Nos vidéos</a></li>
+                                            <li><a href='../contact.php' title='contact'>Nous contacter</a></li>
                                         </ul>
                                     </div>
                                 </div>

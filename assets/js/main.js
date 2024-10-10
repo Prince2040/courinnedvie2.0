@@ -75,7 +75,7 @@
 
    // Google Map For Contact Page
 
-   function contactPageMap() {
+   /*function contactPageMap() {
       var map;
       var mapId = document.getElementById("map-id");
       var latlng = new google.maps.LatLng(-33.868820, 151.209296);
@@ -103,7 +103,7 @@
 
       contactPageMap();
    }
-
+*/
 
 
 
