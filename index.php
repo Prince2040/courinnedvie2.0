@@ -158,7 +158,7 @@ if (isset($sucess_msgDecoded)) {
                             <div class="video-img">
                         
                             <a href='directs.php?id=<?= $videos_recents_data[$i]["id"] ?>'>
-                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]["id"] ?>/default.jpg" alt="Video" />
+                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]["id"] ?>/hqdefault.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">5.28</span>
                             </div>
@@ -211,7 +211,7 @@ if (isset($sucess_msgDecoded)) {
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_allonsAlautreBord_data[$i]['id'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_allonsAlautreBord_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_allonsAlautreBord_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                             <span class="video-duration">5.28</span>
                         </div>
@@ -260,7 +260,7 @@ if (isset($sucess_msgDecoded)) {
                         <div class="single-review" style="display: flex; justify-content: space-between; ">
                             <div class="review-img" style="width: 300px;">
                                 <a href='directs.php?id=<?= $videos_evangelistEnMission_data[$i]['id'] ?> '>
-                                    <img class="lazy" style="width: 100%;" data-src="https://img.youtube.com/vi/<?= $videos_evangelistEnMission_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                    <img class="lazy" style="width: 100%;" data-src="https://img.youtube.com/vi/<?= $videos_evangelistEnMission_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">5.28</span>
                             </div>
@@ -387,7 +387,7 @@ if (isset($sucess_msgDecoded)) {
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_enseignement_data[$i]['id'] ?>'>
-                                <img style=" width: 100%; " class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_enseignement_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img style=" width: 100%; " class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_enseignement_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                             <span class="video-duration">5.28</span>
                         </div>

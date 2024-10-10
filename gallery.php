@@ -57,7 +57,7 @@ include('layouts/header.php');
                         <div class="single-video">
                             <div class="video-img">
                                 <a href='directs.php?id=<?= $videos_recents_data[$i]["id"] ?>'>
-                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]["id"] ?>/default.jpg" alt="Video" />
+                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]["id"] ?>/hqdefault.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">3.11</span>
                             </div>
@@ -108,7 +108,7 @@ include('layouts/header.php');
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_gospelOnFire_data[$i]['id'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_gospelOnFire_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_gospelOnFire_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                             <span class="video-duration">3.11</span>
                         </div>
@@ -158,7 +158,7 @@ include('layouts/header.php');
                         <div class="single-video">
                             <div class="video-img">
                                 <a href='directs.php?id=<?= $videos_enseignement_data[$i]['id'] ?>'>
-                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_enseignement_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                    <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_enseignement_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                                 </a>
                                 <span class="video-duration">3.11</span>
                             </div>
@@ -210,7 +210,7 @@ include('layouts/header.php');
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_DessinAnime_data[$i]['id'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_DessinAnime_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_DessinAnime_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                             <span class="video-duration"></span>
                         </div>
@@ -261,7 +261,7 @@ include('layouts/header.php');
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_AinsiParleEternel_data[$i]['id'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_AinsiParleEternel_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_AinsiParleEternel_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                             <span class="video-duration"></span>
                         </div>
@@ -312,7 +312,7 @@ include('layouts/header.php');
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_allonsAlautreBord_data[$i]['id'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_allonsAlautreBord_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_allonsAlautreBord_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                         </div>
                         <div class="video-content">

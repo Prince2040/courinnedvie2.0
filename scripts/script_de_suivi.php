@@ -1,8 +1,6 @@
 <?php
 // Connexion à la base de données
-//$pdo = new PDO('mysql:host=localhost;dbname=couronnedvie', 'root', '');
-
-$pdo = new PDO('mysql:host=sql206.infinityfree.com;dbname=if0_36391249_couronnedvie', 'if0_36391249', 's3PgD6Z2Q97O' , array( PDO::ATTR_PERSISTENT => true) ) ;
+$pdo = new PDO('mysql:host=localhost;dbname=couronnedvie', 'root', '');
 
 function get_client_ip() {
     $ipaddress = '';

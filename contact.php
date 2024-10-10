@@ -123,7 +123,7 @@ include('layouts/header.php');
                     <div class="single-video">
                         <div class="video-img">
                             <a href='directs.php?id=<?= $videos_recents_data[$i]['id'] ?>'>
-                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]['id'] ?>/default.jpg" alt="Video" />
+                                <img class="lazy" data-src="https://img.youtube.com/vi/<?= $videos_recents_data[$i]['id'] ?>/hqdefault.jpg" alt="Video" />
                             </a>
                             <span class="video-duration">5.28</span>
                         </div>
